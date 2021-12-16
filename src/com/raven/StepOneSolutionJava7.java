@@ -52,6 +52,16 @@ public class StepOneSolutionJava7 {
             }
 
         });
+
+        System.out.println("Print conditionally all person those age greater than 45 ----------------");
+        printConditionally(persons, new Condition() {
+
+            @Override
+            public boolean check(Person p) {
+                return (p.getAge() >= 45);
+            }
+
+        });
     }
 
     private static void printConditionally(List<Person> persons, Condition condition) {
